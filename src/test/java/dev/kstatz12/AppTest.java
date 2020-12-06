@@ -27,4 +27,14 @@ public class AppTest {
 
         assertEquals(expected, result);
     }
+
+    @Test public void testPuzzleTwoP2() {
+        TwoP2 puzzle = new TwoP2(new MockInputTwo());
+
+        Integer result = puzzle.run();
+
+        Integer expected = 1;
+
+        assertEquals(expected, result);
+    }
 }

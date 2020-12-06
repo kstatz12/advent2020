@@ -15,7 +15,7 @@ public class Two extends AbstractPuzzle<Integer> {
     @Override
     public Integer run() {
         final List<String> inputs = getInput();
-        return countInvalidPasswords(inputs);
+        return countValidPasswords(inputs);
     }
 
     private List<String> getInput() {
@@ -62,7 +62,7 @@ public class Two extends AbstractPuzzle<Integer> {
         return count;
     }
 
-    private Integer countInvalidPasswords(final List<String> input) {
+    private Integer countValidPasswords(final List<String> input) {
         return input.stream().filter(x -> validate(parse(x))).collect(Collectors.toList()).size();
     }
 
