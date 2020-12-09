@@ -37,4 +37,23 @@ public class AppTest {
 
         assertEquals(expected, result);
     }
+
+    @Test public void testPuzzleThree() {
+        Three puzzle = new Three(new MockInputThree());
+
+        Integer result = puzzle.run();
+        Integer expected = 7;
+
+        assertEquals(expected, result);
+    }
+
+    @Test public void testPuzzleThreeP2() {
+        ThreeP2 puzzle = new ThreeP2(new MockInputThree());
+
+        Integer result = puzzle.run();
+
+        Integer expected = 336;
+
+        assertEquals(expected, result);
+    }
 }
