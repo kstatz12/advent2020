@@ -56,4 +56,12 @@ public class AppTest {
 
         assertEquals(expected, result);
     }
+
+    @Test public void testPuzzleFour() {
+        Four puzzle = new Four(new MockInputFour());
+        Integer result = puzzle.run();
+        Integer expected = 2;
+
+        assertEquals(expected, result);
+    }
 }

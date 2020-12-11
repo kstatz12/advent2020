@@ -16,15 +16,10 @@ public class ThreeP2 extends AbstractPuzzle<Integer> {
         final List<String> inputs = getInput();
         Integer rowLength = inputs.get(0).length();
         Integer oneByOne = getRouteTrees(inputs, rowLength, 1);
-        System.out.println(oneByOne);
         Integer threeByOne = getRouteTrees(inputs, rowLength, 3);
-        System.out.println(threeByOne);
         Integer fiveByOne = getRouteTrees(inputs, rowLength, 5);
-        System.out.println(fiveByOne);
         Integer sevenByOne = getRouteTrees(inputs, rowLength, 7);
-        System.out.println(sevenByOne);
         Integer oneByTwo = getRouteTreesEvens(inputs, rowLength, 1);
-        System.out.println(oneByTwo);
         return oneByOne * threeByOne * fiveByOne * sevenByOne * oneByTwo;
     }
 
