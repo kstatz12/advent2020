@@ -31,7 +31,6 @@ public class Four extends AbstractPuzzle<Integer> {
         for (String i : input) {
             if (i.equals("")) {
                 String flattened = sb.toString();
-                System.out.println(flattened);
                 sb = new StringBuilder();
                 if (validate(flattened)) {
                     ret.add(flattened);
