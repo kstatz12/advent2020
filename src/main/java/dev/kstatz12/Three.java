@@ -21,15 +21,12 @@ public class Three extends AbstractPuzzle<Integer> {
     private Integer getRouteTrees(final List<String> input, Integer rowLength, Integer moveLength) {
         Integer count = 0;
         Integer idx = 0;
-        for (Integer i = 0; i < input.size(); i++) {
+        for (Integer i = 1; i < input.size(); i++) {
 
-            // skip the first row
-            if (i > 0) {
-                idx = calculateIndex(idx, rowLength, moveLength);
-                char c = input.get(i).toCharArray()[idx];
-                if (c == '#') {
-                    count++;
-                }
+            idx = calculateIndex(idx, rowLength, moveLength);
+            char c = input.get(i).toCharArray()[idx];
+            if (c == '#') {
+                count++;
             }
 
         }
