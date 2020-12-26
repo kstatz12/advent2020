@@ -3,7 +3,7 @@ package dev.kstatz12;
 public class App
 {
     public static void main(String[] args) {
-        exec(new FourP2(new Input()));
+        exec(new FiveP2(new Input()));
     }
 
     private static <T> void exec(AbstractPuzzle<T> puzzle) {

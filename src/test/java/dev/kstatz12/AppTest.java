@@ -71,4 +71,18 @@ public class AppTest {
         Integer expected = 4;
         assertEquals(expected, result);
     }
+
+    @Test public void testPuzzleForTwoInvalid() {
+        FourP2 puzzle = new FourP2(new MockInputFourP2Invalid());
+        Integer result = puzzle.run();
+        Integer expected = 0;
+        assertEquals(expected, result);
+    }
+
+    @Test public void testPuzzleFive() {
+        Five puzzle = new Five(new MockInputFive());
+        Integer expected = 820;
+        Integer result = puzzle.run();
+        assertEquals(expected, result);
+    }
 }

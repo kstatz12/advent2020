@@ -60,31 +60,24 @@ public class FourP2 extends AbstractPuzzle<Integer> {
 
     private boolean validate(final Map<String, String> map) {
         if (!validateBirthYear(map)) {
-            System.out.println("Birth year Invalid");
             return false;
         }
         if (!validateIssueYear(map)) {
-            System.out.println("Issue Year Invalid");
             return false;
         }
         if (!validateExpirationYear(map)) {
-            System.out.println("Expiriation Year Invalid");
             return false;
         }
         if (!validateHeight(map)) {
-            System.out.println("Height Invalid");
             return false;
         }
         if (!validateHairColor(map)) {
-            System.out.println("Hair Color Invalid");
             return false;
         }
         if (!validateEyeColor(map)) {
-            System.out.println("Eye Color Invalid");
             return false;
         }
         if (!validatePid(map)) {
-            System.out.println("Invalid PID");
             return false;
         }
         return true;
@@ -127,18 +120,14 @@ public class FourP2 extends AbstractPuzzle<Integer> {
         final String value = map.get("hcl");
 
         if (!(value.length() == 7)) {
-            System.out.printf("Value Not 7 characters long");
             return false;
         }
 
         if (!value.startsWith("#")) {
-            System.out.println("Does not start with #");
             return false;
         }
 
         final String hex = value.substring(1);
-
-        System.out.println(hex);
 
         final String pattern = "^[a-fA-F0-9]+$";
 
@@ -223,14 +212,12 @@ public class FourP2 extends AbstractPuzzle<Integer> {
     private boolean validateBirthYear(final Map<String, String> map) {
 
         if (!map.containsKey("byr")) {
-            System.out.printf("Key Missing %s\n", "byr");
             return false;
         }
 
         final String value = map.get("byr");
 
         if (value.length() != 4) {
-            System.out.println("value length not 4");
             return false;
         }
 
@@ -250,7 +237,6 @@ public class FourP2 extends AbstractPuzzle<Integer> {
             Integer.parseInt(input);
             return true;
         } catch (final NumberFormatException e) {
-            System.out.printf("Failed Because %s Not A Number\n", input);
             return false;
         }
     }
@@ -258,7 +244,6 @@ public class FourP2 extends AbstractPuzzle<Integer> {
     private boolean isBetween(final Integer input, final Integer lower, final Integer upper) {
 
         if (input > upper || input < lower) {
-            System.out.printf("%d Not Between %d and %d \n", input, lower, upper);
             return false;
         }
         return true;
